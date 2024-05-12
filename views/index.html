@@ -1,20 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<!DOCTYPE html> 
-<html lang="en"> 
-  <head> 
-    <meta charset="UTF-8" /> 
-    <meta http-equiv="X-UA-Compatible" 
-          content="IE=edge" /> 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0" /> 
-    <title>Speed Test</title> 
-  </head> 
-  <body> 
-    <center> 
-      <h1 style="color: green">GeeksforGeeks</h1> 
-      <form method="POST" action="/test"> 
-        <button>Check Internet Speed</button> 
-      </form> 
-    </center> 
-  </body> 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Speed Test</title>
+  <link rel="stylesheet" href="https://unpkg.com/nprogress@0.2.0/nprogress.css">
+  <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
+>
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body background="gray">
+  <center class="animate__animated animate__fadeIn">
+    <h1 style="color: green" class="is-size-1">Test de velcidad</h1>
+    <form method="POST" action="  /test">
+      <button class="button is-white"id="test" style="margin-top: 1rem;" >Realizar test</button>
+    </form>
+  </center>
+</body>
+
+<script>
+const test = document.getElementById('test');
+test.addEventListener('click', () => {
+  NProgress.start();
+  setTimeout(() => {
+    NProgress.done();
+  }, 10000);
+});
+
+</script>
+
+
+
 </html>
